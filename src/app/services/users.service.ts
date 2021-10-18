@@ -5,6 +5,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class UsersService {
+ 
+  newRepo: Repo;
+  apiKey: string = environment.apiKey;
    private baseUrl=environment.BASE_Url
    private token = environment.gitAccessToken
   constructor(private httpClient:HttpClient) { }
