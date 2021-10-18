@@ -7,7 +7,7 @@ import { UsersService } from './services/users.service';
 })
 export class AppComponent implements OnInit,OnDestroy {
   title = 'git-search';
-  username:string = '' 
+  username = '' 
   repositories: any[]= [];
   mySubscription: any;
   isloading = true;
