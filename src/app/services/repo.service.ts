@@ -1,14 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable,Input } from '@angular/core';
 
-@Injectable({
+@Inject({
   providedIn: 'root'
 })
-export class RepoService  {
-
-  constructor(public name: string,
-    public html_url: string,
+export class Repo {
+  constructor(
+    public name: string,
     public description: string,
-    
-    public language: string
-    ) { }
+  ) {}
 }
+

@@ -1,17 +1,13 @@
-<div class="container-fluid">
-    <h2 class="text-center">Enter your username</h2>
-    <hr>
-    <form (ngSubmit)='' #quoteForm='ngForm'>
-        <div class="form-group">
 
-            <label for="name">Github Username</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="new username" name="name"
-                #name='ngModel' required>>
-
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p>username is required</p>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-success">Search repository</button>
-    </form>
-</div>
+    
+<div class="container">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <input class="form-control form-control-md mr-3 w-75" type="text" placeholder="Enter your Username...."
+            name="userName" [(ngModel)]="username" aria-label="Search">
+          <button class="btn" (click)="getUser()">Search</button>
+        </form>
+        
+      </div>
+    </div>
+  

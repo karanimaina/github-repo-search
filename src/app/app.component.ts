@@ -36,10 +36,10 @@ export class AppComponent implements OnInit,OnDestroy {
   //    })
   // )
  this.isloading = false
-  this.usersService.getUsers(this.username).then((response)=>{
+  this.usersService.getUsers(this.username).then((response: any[])=>{
     console.log(response);
     this.repositories=  response;
-  }).catch((error)=>{
+  }).catch((error: any)=>{
     console.log(error)
   }).finally(()=> {
     console.log("finally")

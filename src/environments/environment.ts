@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   BASE_Url:`https://api.github.com`,
-  gitAccessToken:`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`
+  apiKey:`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`
 };
 
 /*

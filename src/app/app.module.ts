@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { RepoComponent } from './repo/repo.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { RepoComponent } from './repo/repo.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
