@@ -1,1 +1,5 @@
-<div class="container border p-5 m-5 h-75"></div>
+<div class="container border p-5 m-5 h-75">
+  <ul *ngFor = 'let repo of repositories'>
+      <li>{{repo.name}}</li>
+  </ul>
+</div>

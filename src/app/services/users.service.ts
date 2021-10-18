@@ -13,7 +13,7 @@ export class UsersService {
     // let param = new HttpParams();
     // param = param.append('username','karanimaina');
     const endpoint = 'users'
-    return this.httpClient.get<any[]>(`${this.baseUrl}/${endpoint}?/${username}/repos`,{
+    return this.httpClient.get<any[]>(`${this.baseUrl}/${endpoint}/${username}/repos`,{
       // params:param
 
     });
