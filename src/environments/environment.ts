@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  BASE_Url:`https://api.github.com`
-
+  BASE_Url:`https://api.github.com`,
+  gitAccessToken: `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`
 };
 
 /*

@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
 })
 export class UsersService {
    private baseUrl=environment.BASE_Url
-
+   private token = environment.gitAccessToken
   constructor(private httpClient:HttpClient) { }
   // getUsers(username: string): Observable<any[]> {
   //   // let param = new HttpParams();
@@ -19,7 +19,7 @@ export class UsersService {
   // }
   getUsers(username: string){
     const endpoint = 'users'
-  return this.httpClient.get<any[]>(`${this.baseUrl}/${endpoint}/${username}/repos`,{
+  return this.httpClient.get<any[]>(`${this.baseUrl}/${endpoint}/${username}?access_token= +${this.token}`,{
     //     // params:param
   }).toPromise()
 }}
