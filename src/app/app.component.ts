@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { UsersService } from './services/users.service';
-import { Subscription }from 'rxjs'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +7,11 @@ import { Subscription }from 'rxjs'
 })
 export class AppComponent implements OnInit,OnDestroy {
   title = 'git-search';
-  username:string = 'karanimaina' 
+  username:string = '' 
   repositories: any[]= [];
   mySubscription: any;
   isloading = true;
+  @Output() searchOutput = new EventEmitter<any>();
   constructor(private usersService:UsersService){} 
   ngOnDestroy(): void {
     this.mySubscription.unsubscribe();
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit,OnDestroy {
   //     console.log(this.repositories.length);
   //    })
   // )
-      this.isloading = false
+ this.isloading = false
   this.usersService.getUsers(this.username).then((response)=>{
     console.log(response);
     this.repositories=  response;
