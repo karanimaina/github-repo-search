@@ -11,13 +11,13 @@ export class AppComponent implements OnInit,OnDestroy {
   username:string = 'karanimaina' 
   repositories: any[]= [];
   mySubscription: any;
-  isloading = false;
+  isloading = true;
   constructor(private usersService:UsersService){} 
   ngOnDestroy(): void {
     this.mySubscription.unsubscribe();
   }
   ngOnInit(): void {
-    this.getPublicRepositories();
+    // this.getPublicRepositories();
   }
 
 
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit,OnDestroy {
   //     console.log(this.repositories.length);
   //    })
   // )
-
+      this.isloading = false
   this.usersService.getUsers(this.username).then((response)=>{
     console.log(response);
     this.repositories=  response;
