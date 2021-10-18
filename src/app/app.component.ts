@@ -27,13 +27,24 @@ export class AppComponent implements OnInit,OnDestroy {
     //   // console.log(response)
     //   this.repositories= response
     // }
-  this.mySubscription.add(
-     this.usersService.getUsers(this.username).subscribe((response)=>{
-      // console.log(response)
-      this.repositories= response;
-      console.log(this.repositories.length);
-     })
-  )
+  // this.mySubscription.add(
+  //    this.usersService.getUsers(this.username).subscribe((response)=>{
+  //     // console.log(response)
+  //     this.repositories= response;
+  //     console.log(this.repositories.length);
+  //    })
+  // )
+
+  this.usersService.getUsers(this.username).then((response)=>{
+    console.log(response);
+    this.repositories=  response;
+  }).catch((error)=>{
+    console.log(error)
+  }).finally(()=> {
+    console.log("finally")
+  })
+
+  }
     }
-}
+
     
