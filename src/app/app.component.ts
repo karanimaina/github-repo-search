@@ -11,6 +11,7 @@ export class AppComponent implements OnInit,OnDestroy {
   username:string = 'karanimaina' 
   repositories: any[]= [];
   mySubscription: any;
+  isloading = false;
   constructor(private usersService:UsersService){} 
   ngOnDestroy(): void {
     this.mySubscription.unsubscribe();
@@ -42,9 +43,10 @@ export class AppComponent implements OnInit,OnDestroy {
     console.log(error)
   }).finally(()=> {
     console.log("finally")
+    this.isloading= true;
   })
 
   }
     
-
+}
     

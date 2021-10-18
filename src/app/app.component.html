@@ -1,4 +1,9 @@
 <div class="container border p-5 m-5 h-75">
+  <hr>
+  <div class="spinner-border text-success" role="status"[hidden]="isloading">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <button (click=" getPublicRepositories") >Get repos</button>
   <ul *ngFor = 'let repo of repositories'>
       <li>{{repo.name}}</li>
   </ul>
