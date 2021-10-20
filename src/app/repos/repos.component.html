@@ -1,6 +1,5 @@
 <div class="container-fluid bg">
     <form class="mb-3 m-3" (ngSubmit)= "searchGithubRepos()" #e="ngForm">
-        
         <input type="text" class="form-control search"  name="search" ngModel #search="ngModel"
             placeholder="Enter Github username to search Repositories..." required >
         <p class="text-danger error-block" ></p>
@@ -19,7 +18,7 @@
                         {{repos?.description}}
                     </div>
                     <a href="{{ repos?.html_url }}" target="_blank" class="">Repository Details</a>
-                    <p>Created On: {{repos?.created_at | date }}</p> 
+                    <p> published on: {{repos?.created_at | date }}</p> 
                 </div>
             </div>
         </div>

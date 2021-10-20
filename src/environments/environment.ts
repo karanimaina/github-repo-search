@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BASE_Url:`https://api.github.com`,
+  BASE_Url:`https://api.github.com/users`,
   apiKey:'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'
 };
 

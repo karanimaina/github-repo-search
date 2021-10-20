@@ -24,7 +24,7 @@
 
 }
 .card:hover{
-    filter: drop-shadow(2px 2px 4px rgb(221, 130, 96));
+    filter: drop-shadow(2px 2px 4px rgb(15, 15, 15));
 }
 .bg{
     background-color: #161b22;
@@ -32,5 +32,5 @@
 }
 .card a{
     text-decoration: none;
-    color: rgb(221, 130, 96);
+    color: rgb(96, 221, 169);
 }
