@@ -43,7 +43,7 @@
                 <div class="card col-md-6" *ngFor="let repository of repository; let i = index ">
                     <h4 class="text-center">{{repository.name}}</h4>
                     <p>{{repository.description}}</p>
-                    <a href="{{ repository.html_url }}" target="_blank" class="">Repository Details</a>
+                    <a href="{{ repository.html_url }}" target="_blank" class="">Repository information</a>
                     <p>Created On: {{repository.created_at | date }}</p> 
                 </div>
             </div>

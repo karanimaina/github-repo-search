@@ -1,11 +1,11 @@
 .user{
-    background-color: rgb(221, 130, 96);
+    background-color: rgb(26, 53, 49);
     border: none;
     color: white;
     border-radius: 10px;
 }
 ::placeholder{
-    color: rgb(221, 130, 96);
+    color: rgb(42, 78, 85);
 }
 
 .b-text img{
@@ -16,7 +16,7 @@
 }
 .twitter a{
     text-decoration: none;
-    color: rgb(221, 130, 96);
+    color: rgb(32, 29, 28);
     
 }
 .git div{
