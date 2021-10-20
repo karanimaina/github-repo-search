@@ -1,52 +1,10 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
-import { UsersService } from './services/users.service';
+import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit,OnDestroy {
-  title = 'git-search';
-  username = '' 
-  repositories: any[]= [];
-  mySubscription: any;
-  isloading = true;
-  @Output() searchOutput = new EventEmitter<any>();
-  constructor(private usersService:UsersService){} 
-  ngOnDestroy(): void {
-    this.mySubscription.unsubscribe();
-  }
-  ngOnInit(): void {
-    // this.getPublicRepositories();
-  }
-
-
-
-  getPublicRepositories(){
-
-    // this.usersService.getUsers(this.username).subscribe((response)=>{
-    //   // console.log(response)
-    //   this.repositories= response
-    // }
-  // this.mySubscription.add(
-  //    this.usersService.getUsers(this.username).subscribe((response)=>{
-  //     // console.log(response)
-  //     this.repositories= response;
-  //     console.log(this.repositories.length);
-  //    })
-  // )
- this.isloading = false
-  this.usersService.getUsers(this.username).then((response: any[])=>{
-    console.log(response);
-    this.repositories=  response;
-  }).catch((error: any)=>{
-    console.log(error)
-  }).finally(()=> {
-    console.log("finally")
-    this.isloading= true;
-  })
-
-  }
-    
+export class AppComponent {
+  title = 'Github-Search';
 }
-    

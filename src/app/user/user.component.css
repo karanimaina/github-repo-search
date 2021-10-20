@@ -1,0 +1,28 @@
+.user{
+    background-color: rgb(221, 130, 96);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+::placeholder{
+    color: rgb(221, 130, 96);
+}
+
+.b-text img{
+    border-radius: 50%;
+    height: auto;
+    width: 60%;
+    padding-bottom: 4px;
+}
+.twitter a{
+    text-decoration: none;
+    color: rgb(221, 130, 96);
+    
+}
+.git div{
+    padding: 6px;
+}
+.bg{
+    background-color: #161b22;
+    color: white;
+}
