@@ -54,7 +54,7 @@ export class DataService {
      company?: string,
    }
    let userPromise = new Promise<void>((resolve, reject)=>{
-     this.http.get<ApiResponse>(environment.BASE_Url + '/' + getUserInfo + '??access_token=' + environment.apiKey).toPromise().then((Response)=>{
+     this.http.get<ApiResponse>(environment.apiUrl + '/' + getUserInfo + '??access_token=' + environment.apiKey).toPromise().then((Response)=>{
 
       this.userData = Response;
       resolve()
@@ -76,7 +76,7 @@ export class DataService {
     created_at: Date
   }
   let reposPromise = new Promise<void>((resolve, reject)=>{
-    this.http.get<ApiResponse>(environment.BASE_Url + '/' + getUserInfo + '/repos?sort=created&direction=desc??access_token=' + environment.apiKey).toPromise().then((Response)=>{
+    this.http.get<ApiResponse>(environment.apiUrl + '/' + getUserInfo + '/repos?sort=created&direction=desc??access_token=' + environment.apiKey).toPromise().then((Response)=>{
 
      this.repoData = Response;
      console.log(this.repoData)
